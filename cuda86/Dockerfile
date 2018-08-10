@@ -13,7 +13,7 @@ RUN git clone https://github.com/Kagamiwomiru/CKFaceCore.git
 
 # condaパッケージをインストール
 
-RUN conda install -y keras-gpu opencv pillow 
+RUN /bin/bash conda install -y keras-gpu opencv pillow 
 
 
 # 環境設定
