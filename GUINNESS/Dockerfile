@@ -34,5 +34,9 @@ RUN echo "~/class3_images/airplane800 airplane" > ~/GUINNESS/list.txt && \
     echo "~/class3_images/car800 car" >> ~/GUINNESS/list.txt
 
 # データセットのピクル化(データセットをGUINNESSで読める形にします)
-RUN  cd && \
+RUN  cd ~/GUINNESS && \
     python3 ~/GUINNESS/gen_training_data.py --pathfile ~/GUINNESS/list.txt --dataset  class3  --size  48  --keepaspect  yes
+
+
+#コンテナ起動時の動作
+CMD echo"GUINNESSを実行するには、\\n$ docker run --runtime=nvidia -it -e DISPLAY=$DISPLAY --net=host -v ~/.Xauthority:/root/.Xauthority イメージ名 \\nと入力してください。
