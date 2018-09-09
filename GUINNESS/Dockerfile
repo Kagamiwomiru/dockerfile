@@ -34,4 +34,5 @@ RUN echo "~/class3_images/airplane800 airplane" > ~/GUINNESS/list.txt && \
     echo "~/class3_images/car800 car" >> ~/GUINNESS/list.txt
 
 # データセットのピクル化(データセットをGUINNESSで読める形にします)
-RUN  python3 ~/GUINNESS/gen_training_data.py --pathfile ~/GUINNESS/list.txt --dataset  class3  --size  48  --keepaspect  yes
+RUN  cd && \
+    python3 ~/GUINNESS/gen_training_data.py --pathfile ~/GUINNESS/list.txt --dataset  class3  --size  48  --keepaspect  yes
