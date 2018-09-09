@@ -8,7 +8,7 @@ RUN apt update && apt upgrade -y
 
 # 日本語化
 RUN apt install -y language-pack-ja-base language-pack-ja && \
-RUN echo 'export LANG=ja_JP.UTF-8' >> ~/.bashrc && \
+    echo 'export LANG=ja_JP.UTF-8' >> ~/.bashrc && \
     echo 'cd' >> ~/.bashrc
 
 # 必要なライブラリ/ソフトウェアをインストール
