@@ -39,4 +39,4 @@ RUN  cd ~/GUINNESS && \
 
 
 #コンテナ起動時の動作
-CMD echo"GUINNESSを実行するには、\\n$ docker run --runtime=nvidia -it -e DISPLAY=$DISPLAY --net=host -v ~/.Xauthority:/root/.Xauthority イメージ名 \\nと入力してください。
+CMD echo"GUINNESSを実行するには、\\n$ docker run --runtime=nvidia -it -e DISPLAY=$DISPLAY --net=host -v ~/.Xauthority:/root/.Xauthority イメージ名 \\nと入力してください。"
