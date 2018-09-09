@@ -29,9 +29,9 @@ RUN wget  -O ~/class3_images.zip "https://www.dropbox.com/s/59fx0r5fuqmuo3j/clas
     unzip ~/class3_images.zip
     
 ###データセットの場所の設定
-RUN echo "../class3_images/airplane800 airplane" > GUINNESS/list.txt && \
-    echo "../class3_images/pets800 pets" >> GUINNESS/list.txt && \
-    echo "../class3_images/car800 car" >> GUINNESS/list.txt
+RUN echo "../class3_images/airplane800 airplane" > ~/GUINNESS/list.txt && \
+    echo "../class3_images/pets800 pets" >> ~/GUINNESS/list.txt && \
+    echo "../class3_images/car800 car" >> ~/GUINNESS/list.txt
 
 # データセットのピクル化(データセットをGUINNESSで読める形にします)
-RUN  python3 GUINESS/gen_training_data.py --pathfile GUINESS/list.txt --dataset  class3  --size  48  --keepaspect  yes
+RUN  python3 ~/GUINESS/gen_training_data.py --pathfile ~/GUINESS/list.txt --dataset  class3  --size  48  --keepaspect  yes
