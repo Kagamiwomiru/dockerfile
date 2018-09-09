@@ -26,7 +26,7 @@ RUN cd ~/ && git clone https://github.com/HirokiNakahara/GUINNESS.git
 ##ここで失敗する場合は下の行をコメントにして、手動でダウンロードしてください。（その場合、コンテナとホストをマウントする必要があります。
 
 RUN wget  -O ~/class3_images.zip "https://www.dropbox.com/s/59fx0r5fuqmuo3j/class3_images.zip?dl=1" && \
-    unzip class3_images.zip
+    unzip ~/class3_images.zip
     
 ###データセットの場所の設定
 RUN echo "../class3_images/airplane800 airplane" > GUINNESS/list.txt && \
