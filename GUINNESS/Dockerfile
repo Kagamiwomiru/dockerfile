@@ -20,7 +20,7 @@ RUN pip3 install -U pip && \
     pip install chainer==1.24.0  opencv-python matplotlib pillow scipy
 
 ## GUINNESS本体ファイル
-RUN cd ~/ && git clone https://github.com/HirokiNakahara/GUINNESS.git
+RUN cd ~/ && git clone https://github.com/HirokiNakahara/GUINNESS.git ~/GUINESS
 
 ## サンプルデータセットのダウンロード
 ##ここで失敗する場合は下の行をコメントにして、手動でダウンロードしてください。（その場合、コンテナとホストをマウントする必要があります。
