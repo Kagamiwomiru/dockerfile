@@ -13,7 +13,7 @@ RUN apt install -y language-pack-ja-base language-pack-ja && \
 
 # 必要なライブラリ/ソフトウェアをインストール
 ## apt-get(apt)
-RUN apt install -y wget unzip less vim python python-pip python-tk python-pyqt4 git libgtk2.0-0 libsm6 libxrender1 libfontconfig1
+RUN apt install -y wget unzip less vim python python-pip python-tk python-qt4 git libgtk2.0-0 libsm6 libxrender1 libfontconfig1
 
 ## pip3
 RUN pip3 install -U pip && \
