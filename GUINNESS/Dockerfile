@@ -13,10 +13,11 @@ RUN apt install -y language-pack-ja-base language-pack-ja && \
 
 # 必要なライブラリ/ソフトウェアをインストール
 ## apt-get(apt)
-RUN apt install -y wget unzip less vim python python-pip python-tk python-qt4 git libgtk2.0-0 libsm6 libxrender1 libfontconfig1
+RUN apt install -y wget unzip less vim python3 python3-pip python3-tk python3-pyqt4 git libgtk2.0-0 libsm6 libxrender1 libfontconfig1
 
-## pip3
+## pip
 RUN pip3 install -U pip && \
+    hash -r pip && \
     pip install chainer==1.24.0  opencv-python matplotlib pillow scipy
 
 ## GUINNESS本体ファイル
@@ -32,6 +33,10 @@ RUN wget  -O ~/class3_images.zip "https://www.dropbox.com/s/59fx0r5fuqmuo3j/clas
 RUN echo "~/class3_images/airplane800 airplane" > ~/GUINNESS/list.txt && \
     echo "~/class3_images/pets800 pets" >> ~/GUINNESS/list.txt && \
     echo "~/class3_images/car800 car" >> ~/GUINNESS/list.txt
+
+RUN python3 -V
+
+
 
 # データセットのピクル化(データセットをGUINNESSで読める形にします)
 RUN  cd ~/GUINNESS && \
