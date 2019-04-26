@@ -5,10 +5,9 @@ MAINTAINER kagamiwomiru <soromonneo@gmail.com>
 
 # 必要なプログラムのインストール
 
-RUN apt update && apt-get install -y vim wget git language-pack-ja-base language-pack-ja 
+RUN apt update && apt upgrade -y;apt install -y vim wget git language-pack-ja-base language-pack-ja 
 
 # 環境設定
 RUN echo 'export LANG=ja_JP.UTF-8' >> ~/.bashrc && \
     echo 'cd' >> ~/.bashrc
 
-CMD echo "コンテナの中に入るには\\n$ docker run --runtime=nvidia -it イメージ名 bash \\nと入力してください。"
