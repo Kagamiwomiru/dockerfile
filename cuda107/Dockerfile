@@ -5,7 +5,7 @@ MAINTAINER kagamiwomiru <soromonneo@gmail.com>
 
 RUN apt update && apt upgrade -y && apt install -y language-pack-ja-base language-pack-ja python3-pip
 
-RUN apt insatall vim wget git 
+RUN apt install vim wget git 
 
 RUN pip3 install  jupyter 
 
